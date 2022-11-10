@@ -2,7 +2,7 @@
   <% if @issue_attachment.present? -%>
     <li><%= context_menu_link l(:button_download), 
               context_url_to_attachment(@issue_attachment, :download => true),
-              :class => 'attachment icon-download', :disabled => false %></li>
+              :class => 'attachment icon icon-download', :disabled => false %></li>
   <% else %>
     <li><%= context_menu_link l(:button_download_bulk_pdf), 
               bulk_pdf_issue_attachments_path(:ids => @issue_attachment_ids, :back_url => @back),
@@ -51,6 +51,6 @@
 
   <li><%= context_menu_link l(:button_delete), 
 			bulk_delete_issue_attachments_path(:ids => @issue_attachment_ids, :back_url => @back),
-			:method => :post, :data => {:confirm => issue_attachments_destroy_confirmation_message}, :class => "attachment icon-del", :disabled => !@can[:delete]  %></li>
+			:method => :post, :data => {:confirm => issue_attachments_destroy_confirmation_message}, :class => "attachment icon icon-del", :disabled => !@can[:delete]  %></li>
 </ul>
 
