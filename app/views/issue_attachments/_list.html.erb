@@ -1,5 +1,5 @@
 <%= form_tag({}, :data => {:cm_url => issue_attachments_menu_path}) do -%>
-<%= hidden_field_tag 'back_url', url_for(params), :id => nil %>
+<%= hidden_field_tag 'back_url', url_for(:controller => params[:controller], :action => params[:action]), :id => nil %>
 <div class="autoscroll">
 <table class="list issue_attachments <%= sort_css_classes %>">
   <thead>
